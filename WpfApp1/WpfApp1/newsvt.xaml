@@ -10,7 +10,7 @@
 
 
     <Grid HorizontalAlignment="Center" Width="800" Height="520" VerticalAlignment="Top">
-        <ComboBox x:Name="myComboBox" SelectionChanged="myComboBox_SelectionChanged" Height="48" VerticalAlignment="Top" Width="240" Margin="538,14,22,0">
+        <ComboBox x:Name="myComboBox" SelectionChanged="myComboBox_SelectionChanged" Height="48" VerticalAlignment="Top" Width="240" Margin="475,14,85,0">
             <ComboBoxItem Content="Принтер"/>
             <ComboBoxItem Content="Ноутбук"/>
             <ComboBoxItem Content="ПК"/>
@@ -22,8 +22,8 @@
         <Button Content="Перейти к заполнению характеристик" HorizontalAlignment="Left" Margin="10,236,0,0" VerticalAlignment="Top" Height="47" Width="240" Click="Button_Click_1"/>
 
 
-        <Button x:Name="save" Content="Сохранить характеристики СВТ" HorizontalAlignment="Left" Margin="310,101,0,0" VerticalAlignment="Top" Height="54" Width="189" Click="save_Click" IsEnabled="False" Visibility="Hidden"/>
-        <Canvas x:Name="p1" HorizontalAlignment="Left" Height="360" Margin="526,10,0,0" VerticalAlignment="Top" Width="264" Visibility="Hidden">
+        <Button x:Name="save" Content="Сохранить характеристики СВТ" HorizontalAlignment="Left" Margin="272,101,0,0" VerticalAlignment="Top" Height="54" Width="189" Click="save_Click" IsEnabled="False"/>
+        <Canvas x:Name="p1" HorizontalAlignment="Left" Height="360" Margin="475,10,0,0" VerticalAlignment="Top" Width="264">
 
             <ComboBox x:Name="proizvod" SelectionChanged="proizvod_SelectionChanged" Height="48" Canvas.Top="65" VerticalAlignment="Top" Width="174">
                 <ComboBoxItem Content="HP"/>
@@ -51,250 +51,252 @@
             <Label Content="Модель" Height="25" Width="66" HorizontalAlignment="Left" Canvas.Left="186" Canvas.Top="145" VerticalAlignment="Top"/>
             <Label Content="Скорость печати" Height="25" Width="120" HorizontalAlignment="Left" Canvas.Left="176" Canvas.Top="308" VerticalAlignment="Center" RenderTransformOrigin="0.403,-0.155"/>
         </Canvas>
-        <ComboBox x:Name="proizvod1" SelectionChanged="proizvod1_SelectionChanged" Height="48" VerticalAlignment="Top" Margin="538,75,81,0" RenderTransformOrigin="0.5,0.5" MaxDropDownHeight="200">
-            <ComboBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.333"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </ComboBox.RenderTransform>
-            <ComboBoxItem Content="Apple"/>
-            <ComboBoxItem Content="Dell"/>
-            <ComboBoxItem Content="HP"/>
-            <ComboBoxItem Content="Acer"/>
-            <ComboBoxItem Content="Asus"/>
-            <ComboBoxItem Content="MSI"/>
-            <ComboBoxItem Content="Razer"/>
-            <ComboBoxItem Content="Microsoft"/>
-            <ComboBoxItem Content="Samsung"/>
-            <ComboBoxItem Content="Fujitsu"/>
-            <ComboBoxItem Content="Toshiba"/>
-            <ComboBoxItem Content="Gigabyte"/>
-            <ComboBoxItem Content="Huawei"/>
-            <ComboBoxItem Content="Xiaomiм"/>
-            <ComboBoxItem Content="LG"/>
-            <ComboBoxItem Content="MacBook "/>
-            <ComboBoxItem Content="Surface "/>
-            <ComboBoxItem Content="ThinkPad "/>
-        </ComboBox>
-        <TextBox x:Name="model1" HorizontalAlignment="Left" Height="47" Margin="538,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="181"/>
-        <ComboBox x:Name="proc" SelectionChanged="proc_SelectionChanged" Height="48" VerticalAlignment="Top" Margin="538,203,81,0" RenderTransformOrigin="0.5,0.5" MaxDropDownHeight="200">
+        <Grid Height="422" Margin="292,75,81,0" VerticalAlignment="Top" Visibility="Hidden">
+            <ComboBox x:Name="proizvod1" SelectionChanged="proizvod1_SelectionChanged" Height="48" VerticalAlignment="Top" Margin="246,0,0,0" RenderTransformOrigin="0.5,0.5" MaxDropDownHeight="200">
+                <ComboBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.333"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ComboBox.RenderTransform>
+                <ComboBoxItem Content="Apple"/>
+                <ComboBoxItem Content="Dell"/>
+                <ComboBoxItem Content="HP"/>
+                <ComboBoxItem Content="Acer"/>
+                <ComboBoxItem Content="Asus"/>
+                <ComboBoxItem Content="MSI"/>
+                <ComboBoxItem Content="Razer"/>
+                <ComboBoxItem Content="Microsoft"/>
+                <ComboBoxItem Content="Samsung"/>
+                <ComboBoxItem Content="Fujitsu"/>
+                <ComboBoxItem Content="Toshiba"/>
+                <ComboBoxItem Content="Gigabyte"/>
+                <ComboBoxItem Content="Huawei"/>
+                <ComboBoxItem Content="Xiaomiм"/>
+                <ComboBoxItem Content="LG"/>
+                <ComboBoxItem Content="MacBook "/>
+                <ComboBoxItem Content="Surface "/>
+                <ComboBoxItem Content="ThinkPad "/>
+            </ComboBox>
+            <TextBox x:Name="model1" HorizontalAlignment="Left" Height="47" Margin="246,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="181"/>
+            <ComboBox x:Name="proc" SelectionChanged="proc_SelectionChanged" Height="48" VerticalAlignment="Top" Margin="246,128,0,0" RenderTransformOrigin="0.5,0.5" MaxDropDownHeight="200">
 
-            <ComboBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.333"/>
-                    <TranslateTransform/>
+                <ComboBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.333"/>
+                        <TranslateTransform/>
 
-                </TransformGroup>
-            </ComboBox.RenderTransform>
-            <ComboBoxItem Content="Pentium Silver N5000"/>
-            <ComboBoxItem Content="Pentium Silver N5030"/>
-            <ComboBoxItem Content="Pentium Silver N6000"/>
-            <ComboBoxItem Content="Pentium Gold 6405"/>
-            <ComboBoxItem Content="Pentium Gold 7505"/>
-            <ComboBoxItem Content="Celeron N3060"/>
-            <ComboBoxItem Content="Celeron N3450"/>
-            <ComboBoxItem Content="Celeron N4020"/>
-            <ComboBoxItem Content="Celeron N4500"/>
-            <ComboBoxItem Content="Celeron N5105"/>
-            <ComboBoxItem Content="i3-7100U"/>
-            <ComboBoxItem Content="i3-8145U"/>
-            <ComboBoxItem Content="i3-10110U"/>
-            <ComboBoxItem Content="i3-1215U"/>
-            <ComboBoxItem Content="i3-13100HX"/>
-            <ComboBoxItem Content="i5-11400H"/>
-            <ComboBoxItem Content="i5-12450H"/>
-            <ComboBoxItem Content="i5-12500H"/>
-            <ComboBoxItem Content="i5-13420H"/>
-            <ComboBoxItem Content="i5-13500HX"/>
-            <ComboBoxItem Content="i7-11800H"/>
-            <ComboBoxItem Content="i7-12650H"/>
-            <ComboBoxItem Content="i7-12700H"/>
-            <ComboBoxItem Content="i7-13620HX"/>
-            <ComboBoxItem Content="i7-13700HX"/>
-            <ComboBoxItem Content="i9-12900HX"/>
-            <ComboBoxItem Content="i9-12950HX"/>
-            <ComboBoxItem Content="i9-13900HX"/>
-            <ComboBoxItem Content="i9-13950HX"/>
-            <ComboBoxItem Content="i9-13980HX"/>
-            <ComboBoxItem Content="Ryzen 3 4300U"/>
-            <ComboBoxItem Content="Ryzen 3 5300U"/>
-            <ComboBoxItem Content="Ryzen 3 5400U"/>
-            <ComboBoxItem Content="Ryzen 5 5600HS"/>
-            <ComboBoxItem Content="Ryzen 5 5600H"/>
-            <ComboBoxItem Content="Ryzen 5 6600HS"/>
-            <ComboBoxItem Content="Ryzen 7 5800HS"/>
-            <ComboBoxItem Content="Ryzen 7 5800H"/>
-            <ComboBoxItem Content="Ryzen 7 6800HS"/>
-            <ComboBoxItem Content="Ryzen 9 5900HS"/>
-            <ComboBoxItem Content="Ryzen 9 5900HX"/>
-            <ComboBoxItem Content="Athlon Gold 3150U"/>
-            <ComboBoxItem Content="Athlon Silver 3050U"/>
-            <ComboBoxItem Content="Epyc Embedded 3251"/>
-            <ComboBoxItem Content="Epyc Embedded 3151"/>
-            <ComboBoxItem Content="Snapdragon 7c Gen 2"/>
-            <ComboBoxItem Content="Snapdragon 7c+ Gen 3"/>
-            <ComboBoxItem Content="Snapdragon 8c Gen 2"/>
-            <ComboBoxItem Content="Snapdragon 8cx Gen 2"/>
-            <ComboBoxItem Content="Snapdragon 8cx Gen 3"/>
-            <ComboBoxItem Content="Dimensity 1100"/>
-            <ComboBoxItem Content="Dimensity 1200"/>
-            <ComboBoxItem Content="Dimensity 1300"/>
-            <ComboBoxItem Content="M1"/>
-            <ComboBoxItem Content="M1 Pro"/>
-            <ComboBoxItem Content="M1 Max"/>
-            <ComboBoxItem Content="M2"/>
-            <ComboBoxItem Content="M2 Pro"/>
-            <ComboBoxItem Content="M2 Max"/>
-
-
-        </ComboBox>
-        <ComboBox x:Name="video" SelectionChanged="video_SelectionChanged" Height="48" VerticalAlignment="Top" Margin="538,265,81,0" RenderTransformOrigin="0.5,0.5" MaxDropDownHeight="200">
-            <ComboBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.333"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </ComboBox.RenderTransform>
-            <ComboBoxItem Content="GeForce MX110"/>
-            <ComboBoxItem Content="GeForce MX130"/>
-            <ComboBoxItem Content="GeForce MX150"/>
-            <ComboBoxItem Content="GeForce MX230"/>
-            <ComboBoxItem Content="GeForce MX250"/>
-            <ComboBoxItem Content="GeForce MX330"/>
-            <ComboBoxItem Content="GeForce MX350"/>
-            <ComboBoxItem Content="GeForce MX450"/>
-            <ComboBoxItem Content="GeForce MX550"/>
-            <ComboBoxItem Content="GeForce MX570"/>
-            <ComboBoxItem Content="GeForce GTX 1650 (мобильная)"/>
-            <ComboBoxItem Content="GeForce GTX 1650 Super (мобильная)"/>
-            <ComboBoxItem Content="GeForce GTX 1650 Ti (мобильная)"/>
-            <ComboBoxItem Content="GeForce GTX 1660 (мобильная)"/>
-            <ComboBoxItem Content="GeForce GTX 1660 Super (мобильная)"/>
-            <ComboBoxItem Content="GeForce GTX 1660 Ti (мобильная)"/>
-            <ComboBoxItem Content="GeForce RTX 2060 (мобильная)"/>
-            <ComboBoxItem Content="GeForce RTX 2060 Super (мобильная)"/>
-            <ComboBoxItem Content="GeForce RTX 2070 (мобильная)"/>
-            <ComboBoxItem Content="GeForce RTX 2070 Super (мобильная)"/>
-            <ComboBoxItem Content="GeForce RTX 2080 (мобильная)"/>
-            <ComboBoxItem Content="GeForce RTX 2080 Super (мобильная)"/>
-            <ComboBoxItem Content="GeForce RTX 2080 Ti (мобильная)"/>
-            <ComboBoxItem Content="GeForce RTX 3060 (мобильная) "/>
-            <ComboBoxItem Content="GeForce RTX 3060 Ti (мобильная) "/>
-            <ComboBoxItem Content="GeForce RTX 3070 (мобильная) "/>
-            <ComboBoxItem Content="GeForce RTX 3070 Ti (мобильная)"/>
-            <ComboBoxItem Content="GeForce RTX 3080 (мобильная) "/>
-            <ComboBoxItem Content="GeForce RTX 3080 Ti (мобильная) "/>
-            <ComboBoxItem Content="GeForce RTX 3090 (мобильная)"/>
-            <ComboBoxItem Content="GeForce RTX 4060 (мобильная)"/>
-            <ComboBoxItem Content="GeForce RTX 4070 (мобильная) "/>
-            <ComboBoxItem Content="GeForce RTX 4080 (мобильная) "/>
-            <ComboBoxItem Content="GeForce RTX 4090 (мобильная) "/>
-            <ComboBoxItem Content="Radeon RX 520M "/>
-            <ComboBoxItem Content="Radeon RX 530M "/>
-            <ComboBoxItem Content="Radeon RX 620M "/>
-            <ComboBoxItem Content="Radeon RX 630M "/>
-            <ComboBoxItem Content="Radeon Vega 8/10/11 "/>
-            <ComboBoxItem Content="Radeon 680M "/>
-            <ComboBoxItem Content="Radeon 610M "/>
-            <ComboBoxItem Content="Radeon RX 5600M (мобильная) "/>
-            <ComboBoxItem Content="Radeon RX 5500M (мобильная) "/>
-            <ComboBoxItem Content="Radeon RX 6400 (мобильная) "/>
-            <ComboBoxItem Content="Radeon RX 6500S (мобильная) "/>
-            <ComboBoxItem Content="Radeon RX 6500M (мобильная) "/>
-            <ComboBoxItem Content="Radeon RX 6600M (мобильная) "/>
-            <ComboBoxItem Content="Radeon RX 6500M (мобильная) "/>
-            <ComboBoxItem Content="Radeon RX 6600M (мобильная) "/>
-            <ComboBoxItem Content="Radeon RX 6600XT (мобильная) "/>
-            <ComboBoxItem Content="Radeon RX 6700XT (мобильная) "/>
-            <ComboBoxItem Content="Radeon RX 6800XT (мобильная) "/>
-            <ComboBoxItem Content="Radeon RX 6900XT (мобильная) "/>
-            <ComboBoxItem Content="Radeon RX 6800M, RX 6700M, RX 6600M "/>
-            <ComboBoxItem Content="Radeon RX 6000M Series (RX 6800S, RX 6700S, RX 6600S) "/>
-            <ComboBoxItem Content="Radeon RX 7000M Series (RX 7800S, RX 7700S, RX 7600S) "/>
-            <ComboBoxItem Content="Intel UHD Graphics (до 6 поколения) "/>
-            <ComboBoxItem Content="Intel UHD Graphics 620/630 "/>
-            <ComboBoxItem Content="Intel UHD Graphics 730/750/770 "/>
-            <ComboBoxItem Content="Iris Xe Graphics "/>
-            <ComboBoxItem Content="Adreno 640 "/>
-            <ComboBoxItem Content="Adreno 660 "/>
-            <ComboBoxItem Content="Adreno 730 "/>
+                    </TransformGroup>
+                </ComboBox.RenderTransform>
+                <ComboBoxItem Content="Pentium Silver N5000"/>
+                <ComboBoxItem Content="Pentium Silver N5030"/>
+                <ComboBoxItem Content="Pentium Silver N6000"/>
+                <ComboBoxItem Content="Pentium Gold 6405"/>
+                <ComboBoxItem Content="Pentium Gold 7505"/>
+                <ComboBoxItem Content="Celeron N3060"/>
+                <ComboBoxItem Content="Celeron N3450"/>
+                <ComboBoxItem Content="Celeron N4020"/>
+                <ComboBoxItem Content="Celeron N4500"/>
+                <ComboBoxItem Content="Celeron N5105"/>
+                <ComboBoxItem Content="i3-7100U"/>
+                <ComboBoxItem Content="i3-8145U"/>
+                <ComboBoxItem Content="i3-10110U"/>
+                <ComboBoxItem Content="i3-1215U"/>
+                <ComboBoxItem Content="i3-13100HX"/>
+                <ComboBoxItem Content="i5-11400H"/>
+                <ComboBoxItem Content="i5-12450H"/>
+                <ComboBoxItem Content="i5-12500H"/>
+                <ComboBoxItem Content="i5-13420H"/>
+                <ComboBoxItem Content="i5-13500HX"/>
+                <ComboBoxItem Content="i7-11800H"/>
+                <ComboBoxItem Content="i7-12650H"/>
+                <ComboBoxItem Content="i7-12700H"/>
+                <ComboBoxItem Content="i7-13620HX"/>
+                <ComboBoxItem Content="i7-13700HX"/>
+                <ComboBoxItem Content="i9-12900HX"/>
+                <ComboBoxItem Content="i9-12950HX"/>
+                <ComboBoxItem Content="i9-13900HX"/>
+                <ComboBoxItem Content="i9-13950HX"/>
+                <ComboBoxItem Content="i9-13980HX"/>
+                <ComboBoxItem Content="Ryzen 3 4300U"/>
+                <ComboBoxItem Content="Ryzen 3 5300U"/>
+                <ComboBoxItem Content="Ryzen 3 5400U"/>
+                <ComboBoxItem Content="Ryzen 5 5600HS"/>
+                <ComboBoxItem Content="Ryzen 5 5600H"/>
+                <ComboBoxItem Content="Ryzen 5 6600HS"/>
+                <ComboBoxItem Content="Ryzen 7 5800HS"/>
+                <ComboBoxItem Content="Ryzen 7 5800H"/>
+                <ComboBoxItem Content="Ryzen 7 6800HS"/>
+                <ComboBoxItem Content="Ryzen 9 5900HS"/>
+                <ComboBoxItem Content="Ryzen 9 5900HX"/>
+                <ComboBoxItem Content="Athlon Gold 3150U"/>
+                <ComboBoxItem Content="Athlon Silver 3050U"/>
+                <ComboBoxItem Content="Epyc Embedded 3251"/>
+                <ComboBoxItem Content="Epyc Embedded 3151"/>
+                <ComboBoxItem Content="Snapdragon 7c Gen 2"/>
+                <ComboBoxItem Content="Snapdragon 7c+ Gen 3"/>
+                <ComboBoxItem Content="Snapdragon 8c Gen 2"/>
+                <ComboBoxItem Content="Snapdragon 8cx Gen 2"/>
+                <ComboBoxItem Content="Snapdragon 8cx Gen 3"/>
+                <ComboBoxItem Content="Dimensity 1100"/>
+                <ComboBoxItem Content="Dimensity 1200"/>
+                <ComboBoxItem Content="Dimensity 1300"/>
+                <ComboBoxItem Content="M1"/>
+                <ComboBoxItem Content="M1 Pro"/>
+                <ComboBoxItem Content="M1 Max"/>
+                <ComboBoxItem Content="M2"/>
+                <ComboBoxItem Content="M2 Pro"/>
+                <ComboBoxItem Content="M2 Max"/>
 
 
+            </ComboBox>
+            <ComboBox x:Name="video" SelectionChanged="video_SelectionChanged" Height="48" VerticalAlignment="Top" Margin="246,190,0,0" RenderTransformOrigin="0.5,0.5" MaxDropDownHeight="200">
+                <ComboBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.333"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ComboBox.RenderTransform>
+                <ComboBoxItem Content="GeForce MX110"/>
+                <ComboBoxItem Content="GeForce MX130"/>
+                <ComboBoxItem Content="GeForce MX150"/>
+                <ComboBoxItem Content="GeForce MX230"/>
+                <ComboBoxItem Content="GeForce MX250"/>
+                <ComboBoxItem Content="GeForce MX330"/>
+                <ComboBoxItem Content="GeForce MX350"/>
+                <ComboBoxItem Content="GeForce MX450"/>
+                <ComboBoxItem Content="GeForce MX550"/>
+                <ComboBoxItem Content="GeForce MX570"/>
+                <ComboBoxItem Content="GeForce GTX 1650 (мобильная)"/>
+                <ComboBoxItem Content="GeForce GTX 1650 Super (мобильная)"/>
+                <ComboBoxItem Content="GeForce GTX 1650 Ti (мобильная)"/>
+                <ComboBoxItem Content="GeForce GTX 1660 (мобильная)"/>
+                <ComboBoxItem Content="GeForce GTX 1660 Super (мобильная)"/>
+                <ComboBoxItem Content="GeForce GTX 1660 Ti (мобильная)"/>
+                <ComboBoxItem Content="GeForce RTX 2060 (мобильная)"/>
+                <ComboBoxItem Content="GeForce RTX 2060 Super (мобильная)"/>
+                <ComboBoxItem Content="GeForce RTX 2070 (мобильная)"/>
+                <ComboBoxItem Content="GeForce RTX 2070 Super (мобильная)"/>
+                <ComboBoxItem Content="GeForce RTX 2080 (мобильная)"/>
+                <ComboBoxItem Content="GeForce RTX 2080 Super (мобильная)"/>
+                <ComboBoxItem Content="GeForce RTX 2080 Ti (мобильная)"/>
+                <ComboBoxItem Content="GeForce RTX 3060 (мобильная) "/>
+                <ComboBoxItem Content="GeForce RTX 3060 Ti (мобильная) "/>
+                <ComboBoxItem Content="GeForce RTX 3070 (мобильная) "/>
+                <ComboBoxItem Content="GeForce RTX 3070 Ti (мобильная)"/>
+                <ComboBoxItem Content="GeForce RTX 3080 (мобильная) "/>
+                <ComboBoxItem Content="GeForce RTX 3080 Ti (мобильная) "/>
+                <ComboBoxItem Content="GeForce RTX 3090 (мобильная)"/>
+                <ComboBoxItem Content="GeForce RTX 4060 (мобильная)"/>
+                <ComboBoxItem Content="GeForce RTX 4070 (мобильная) "/>
+                <ComboBoxItem Content="GeForce RTX 4080 (мобильная) "/>
+                <ComboBoxItem Content="GeForce RTX 4090 (мобильная) "/>
+                <ComboBoxItem Content="Radeon RX 520M "/>
+                <ComboBoxItem Content="Radeon RX 530M "/>
+                <ComboBoxItem Content="Radeon RX 620M "/>
+                <ComboBoxItem Content="Radeon RX 630M "/>
+                <ComboBoxItem Content="Radeon Vega 8/10/11 "/>
+                <ComboBoxItem Content="Radeon 680M "/>
+                <ComboBoxItem Content="Radeon 610M "/>
+                <ComboBoxItem Content="Radeon RX 5600M (мобильная) "/>
+                <ComboBoxItem Content="Radeon RX 5500M (мобильная) "/>
+                <ComboBoxItem Content="Radeon RX 6400 (мобильная) "/>
+                <ComboBoxItem Content="Radeon RX 6500S (мобильная) "/>
+                <ComboBoxItem Content="Radeon RX 6500M (мобильная) "/>
+                <ComboBoxItem Content="Radeon RX 6600M (мобильная) "/>
+                <ComboBoxItem Content="Radeon RX 6500M (мобильная) "/>
+                <ComboBoxItem Content="Radeon RX 6600M (мобильная) "/>
+                <ComboBoxItem Content="Radeon RX 6600XT (мобильная) "/>
+                <ComboBoxItem Content="Radeon RX 6700XT (мобильная) "/>
+                <ComboBoxItem Content="Radeon RX 6800XT (мобильная) "/>
+                <ComboBoxItem Content="Radeon RX 6900XT (мобильная) "/>
+                <ComboBoxItem Content="Radeon RX 6800M, RX 6700M, RX 6600M "/>
+                <ComboBoxItem Content="Radeon RX 6000M Series (RX 6800S, RX 6700S, RX 6600S) "/>
+                <ComboBoxItem Content="Radeon RX 7000M Series (RX 7800S, RX 7700S, RX 7600S) "/>
+                <ComboBoxItem Content="Intel UHD Graphics (до 6 поколения) "/>
+                <ComboBoxItem Content="Intel UHD Graphics 620/630 "/>
+                <ComboBoxItem Content="Intel UHD Graphics 730/750/770 "/>
+                <ComboBoxItem Content="Iris Xe Graphics "/>
+                <ComboBoxItem Content="Adreno 640 "/>
+                <ComboBoxItem Content="Adreno 660 "/>
+                <ComboBoxItem Content="Adreno 730 "/>
 
 
 
-        </ComboBox>
-        <ComboBox x:Name="monitor" SelectionChanged="monitor_SelectionChanged" Height="48" VerticalAlignment="Top" Margin="538,323,81,0" RenderTransformOrigin="0.5,0.5" MaxDropDownHeight="200">
-            <ComboBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.333"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </ComboBox.RenderTransform>
-            <ComboBoxItem Content="640 x 480"/>
-            <ComboBoxItem Content="800 x 600"/>
-            <ComboBoxItem Content="1024 x 768"/>
-            <ComboBoxItem Content="1280 x 960"/>
-            <ComboBoxItem Content="1600 x 1200"/>
-            <ComboBoxItem Content="1280 x 720"/>
-            <ComboBoxItem Content="1366 x 768"/>
-            <ComboBoxItem Content="1600 x 900"/>
-            <ComboBoxItem Content="1920 x 1080"/>
-            <ComboBoxItem Content="2560 x 1440"/>
-            <ComboBoxItem Content="3840 x 2160"/>
-            <ComboBoxItem Content="1280 x 800"/>
-            <ComboBoxItem Content="1440 x 900"/>
-            <ComboBoxItem Content="1680 x 1050м"/>
-            <ComboBoxItem Content="1920 x 1200"/>
-            <ComboBoxItem Content="2560 x 1600 "/>
-
-        </ComboBox>
-        <ComboBox x:Name="hddssd" SelectionChanged="hddssd_SelectionChanged" Height="48" VerticalAlignment="Top" Margin="538,387,81,0" RenderTransformOrigin="0.5,0.5" MaxDropDownHeight="200">
-            <ComboBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.333"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </ComboBox.RenderTransform>
-            <ComboBoxItem Content="меньше 250Гб"/>
-            <ComboBoxItem Content="250-500Гб"/>
-            <ComboBoxItem Content="500-1000Гб"/>
-            <ComboBoxItem Content="1000Гб и больше"/>
 
 
-        </ComboBox>
-        <ComboBox x:Name="ozy" SelectionChanged="ozy_SelectionChanged" Height="48" VerticalAlignment="Top" Margin="538,449,81,0" RenderTransformOrigin="0.5,0.5" MaxDropDownHeight="200">
-            <ComboBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.333"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </ComboBox.RenderTransform>
-            <ComboBoxItem Content="меньше 1Гб"/>
-            <ComboBoxItem Content="1-2Гб"/>
-            <ComboBoxItem Content="2-4Гб"/>
-            <ComboBoxItem Content="4-8Гб"/>
-            <ComboBoxItem Content="8-16Гб"/>
-            <ComboBoxItem Content="16-32Гб"/>
-            <ComboBoxItem Content="32-64Гб"/>
-            <ComboBoxItem Content="64Гб и больше"/>
+            </ComboBox>
+            <ComboBox x:Name="monitor" SelectionChanged="monitor_SelectionChanged" Height="48" VerticalAlignment="Top" Margin="246,248,0,0" RenderTransformOrigin="0.5,0.5" MaxDropDownHeight="200">
+                <ComboBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.333"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ComboBox.RenderTransform>
+                <ComboBoxItem Content="640 x 480"/>
+                <ComboBoxItem Content="800 x 600"/>
+                <ComboBoxItem Content="1024 x 768"/>
+                <ComboBoxItem Content="1280 x 960"/>
+                <ComboBoxItem Content="1600 x 1200"/>
+                <ComboBoxItem Content="1280 x 720"/>
+                <ComboBoxItem Content="1366 x 768"/>
+                <ComboBoxItem Content="1600 x 900"/>
+                <ComboBoxItem Content="1920 x 1080"/>
+                <ComboBoxItem Content="2560 x 1440"/>
+                <ComboBoxItem Content="3840 x 2160"/>
+                <ComboBoxItem Content="1280 x 800"/>
+                <ComboBoxItem Content="1440 x 900"/>
+                <ComboBoxItem Content="1680 x 1050м"/>
+                <ComboBoxItem Content="1920 x 1200"/>
+                <ComboBoxItem Content="2560 x 1600 "/>
+
+            </ComboBox>
+            <ComboBox x:Name="hddssd" SelectionChanged="hddssd_SelectionChanged" Height="48" VerticalAlignment="Top" Margin="246,312,0,0" RenderTransformOrigin="0.5,0.5" MaxDropDownHeight="200">
+                <ComboBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.333"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ComboBox.RenderTransform>
+                <ComboBoxItem Content="меньше 250Гб"/>
+                <ComboBoxItem Content="250-500Гб"/>
+                <ComboBoxItem Content="500-1000Гб"/>
+                <ComboBoxItem Content="1000Гб и больше"/>
 
 
-        </ComboBox>
-        <Button x:Name="save2" Content="Сохранить характеристики СВТ" HorizontalAlignment="Left" Margin="292,143,0,0" VerticalAlignment="Top" Height="54" Width="188" Click="save_Click" IsEnabled="False"/>
+            </ComboBox>
+            <ComboBox x:Name="ozy" SelectionChanged="ozy_SelectionChanged" Height="48" VerticalAlignment="Top" Margin="246,374,0,0" RenderTransformOrigin="0.5,0.5" MaxDropDownHeight="200">
+                <ComboBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.333"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ComboBox.RenderTransform>
+                <ComboBoxItem Content="меньше 1Гб"/>
+                <ComboBoxItem Content="1-2Гб"/>
+                <ComboBoxItem Content="2-4Гб"/>
+                <ComboBoxItem Content="4-8Гб"/>
+                <ComboBoxItem Content="8-16Гб"/>
+                <ComboBoxItem Content="16-32Гб"/>
+                <ComboBoxItem Content="32-64Гб"/>
+                <ComboBoxItem Content="64Гб и больше"/>
+
+
+            </ComboBox>
+            <Button x:Name="save2" Content="Сохранить характеристики СВТ" HorizontalAlignment="Left" Margin="0,68,0,0" VerticalAlignment="Top" Height="54" Width="188" Click="save_Click" IsEnabled="False"/>
+        </Grid>
     </Grid>
 
 </Window>
