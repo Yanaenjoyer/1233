@@ -143,7 +143,9 @@ namespace WpfApp1
 
         private void BackButton(object sender, RoutedEventArgs e)
         {
-
+            var reg = new AdminPage();
+            reg.Show();
+            this.Close();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

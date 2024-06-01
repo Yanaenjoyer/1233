@@ -152,12 +152,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="buy.xaml.cs">
+      <DependentUpon>buy.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="Main2.xaml.cs">
+      <DependentUpon>Main2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="newsvt.xaml.cs">
       <DependentUpon>newsvt.xaml</DependentUpon>
     </Compile>
+    <Compile Include="peredacha.xaml.cs">
+      <DependentUpon>peredacha.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegPage.xaml.cs">
       <DependentUpon>RegPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="remont.xaml.cs">
+      <DependentUpon>remont.xaml</DependentUpon>
     </Compile>
     <Compile Include="svt.xaml.cs">
       <DependentUpon>svt.xaml</DependentUpon>
@@ -169,7 +181,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="buy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Main2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -195,7 +215,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="peredacha.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RegPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="remont.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

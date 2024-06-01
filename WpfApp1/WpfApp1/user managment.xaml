@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="user_managment" Height="457" Width="800">
     <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="410" Margin="0,23,0,0" Width="780">
-        <Button FontSize="20" Content="Назад" Margin="617,142,25,0" VerticalAlignment="Top" Height="39" Click="BackButton"/>
+        <Button FontSize="20" Content="Назад" Margin="632,361,10,0" VerticalAlignment="Top" Height="39" Click="BackButton"/>
         <DataGrid   HorizontalAlignment="Left" Height="153" VerticalAlignment="Top" Width="601" AutoGenerateColumns="False" x:Name="DG"  >
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding EmployeeId}" Header="Номер сотрудника" Width="100"/>

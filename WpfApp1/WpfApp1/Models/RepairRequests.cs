@@ -10,6 +10,8 @@ namespace WpfApp1.Models
         public string RepairId { get; set; }
         public string Description { get; set; }
 
+        public string SerialNumber { get; set; }
+
         public virtual UserRepairRequests UserRepairRequests { get; set; }
     }
 }

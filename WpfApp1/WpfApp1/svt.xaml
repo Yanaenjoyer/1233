@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="svt" Height="450" Width="800">
     <Grid>
-        <Button FontSize="20" Content="Назад" Margin="627,171,35,0" VerticalAlignment="Top" Height="39" Click="BackButton"/>
+        <Button FontSize="20" Content="Назад" Margin="627,385,35,0" VerticalAlignment="Top" Height="39" Click="BackButton"/>
         <DataGrid   HorizontalAlignment="Left" Height="153" VerticalAlignment="Top" Width="601" AutoGenerateColumns="False" x:Name="DG1" Margin="10,29,0,0"  >
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding SerialNumber}" Header="Серийный номер" Width="100"/>
@@ -20,6 +20,6 @@
         <Button x:Name="removeButton" FontSize="20" Content="Удалить" HorizontalAlignment="Left" Margin="627,122,0,0" VerticalAlignment="Top" Width="138" Height="40" Click="removeButton_Click"/>
         <Button x:Name="changeButton" FontSize="20" Content="Изменить" HorizontalAlignment="Left" Margin="627,77,0,0" VerticalAlignment="Top" Width="138" Height="40" Click="changeButton_Click" RenderTransformOrigin="0.324,0.455"/>
         <Button x:Name="updateButton" FontSize="20" Content="Обновить" HorizontalAlignment="Left" Margin="627,29,0,0" VerticalAlignment="Top" Width="138" Height="40" Click="updateButton_Click"/>
-        <Button x:Name="Addsvt" FontSize="20" Content="Добавить СВТ" Margin="627,217,35,0" VerticalAlignment="Top" Height="39" Click="Addsvt_Click"/>
+        <Button x:Name="Addsvt" FontSize="20" Content="Добавить СВТ" Margin="627,167,35,0" VerticalAlignment="Top" Height="39" Click="Addsvt_Click"/>
     </Grid>
 </Window>

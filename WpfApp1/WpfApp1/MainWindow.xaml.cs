@@ -25,7 +25,7 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
-
+        string usid = "";
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             diplomContext db = new diplomContext();
@@ -34,6 +34,8 @@ namespace WpfApp1
 
                 if (users != null)
                 {
+                    usid = users.UserId;
+                    Class1.UserID = usid;
                     if (users.Role == "Admin")
                     {
                         var AdminPage = new AdminPage();
@@ -42,15 +44,15 @@ namespace WpfApp1
                     }
                     else
                     {
-                        var Main = new Main();
-                        Main.Show();
+                        var Main2 = new Main2();
+                        Main2.Show();
                         this.Close();
                     }
                  
                 }
                 else
                 {
-                    MessageBox.Show("не правильно");
+                    MessageBox.Show("введите корректные данные для входа или попросите администратора зарегестрировать вас в системе");
                     
                 }
 

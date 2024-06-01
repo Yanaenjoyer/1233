@@ -48,5 +48,33 @@ namespace WpfApp1
             svt.Show();
             this.Close();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            var main = new MainWindow();
+            main.Show();
+            this.Close();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            var remont = new remont();
+            remont.Show();
+            this.Close();
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            var per = new peredacha();
+            per.Show();
+            this.Close();
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            var b = new buy();
+            b.Show();
+            this.Close();
+        }
     }
 }

@@ -273,6 +273,10 @@ namespace WpfApp1.Models
                     .HasColumnName("Repair_ID")
                     .HasMaxLength(20);
 
+                entity.Property(e => e.SerialNumber)
+                   .HasColumnName("Serial_number")
+                   .HasMaxLength(50);
+
                 entity.Property(e => e.Description).IsRequired();
 
                 entity.HasOne(d => d.UserRepairRequests)

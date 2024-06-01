@@ -7,9 +7,13 @@
         mc:Ignorable="d"
         Title="AdminPage" Height="450" Width="800">
     <Grid>
-        <Button Content="Перейти к СВТ" HorizontalAlignment="Left" Height="65" Margin="271,105,0,0" VerticalAlignment="Top" Width="215" Click="Button_Click_2"/>
-        <Button Content="Управление пользователями" HorizontalAlignment="Left" Height="72" Margin="271,194,0,0" VerticalAlignment="Top" Width="215" Click="Button_Click_1"/>
-        <Button Content="Новый пользователь" HorizontalAlignment="Left" Height="69" Margin="271,300,0,0" VerticalAlignment="Top" Width="215" Click="Button_Click"/>
+        <Button Content="Перейти к СВТ" HorizontalAlignment="Left" Height="65" Margin="276,22,0,0" VerticalAlignment="Top" Width="215" Click="Button_Click_2"/>
+        <Button Content="Управление пользователями" HorizontalAlignment="Left" Height="72" Margin="278,92,0,0" VerticalAlignment="Top" Width="215" Click="Button_Click_1"/>
+        <Button Content="Новый пользователь" HorizontalAlignment="Left" Height="69" Margin="278,169,0,0" VerticalAlignment="Top" Width="215" Click="Button_Click"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Height="34" Margin="689,10,0,0" VerticalAlignment="Top" Width="85" Click="Button_Click_3"/>
+        <Button Content="Создание заявки на ремонт" HorizontalAlignment="Left" Height="72" Margin="278,243,0,0" VerticalAlignment="Top" Width="213" Click="Button_Click_4"/>
+        <Button Content="Передача СВТ " HorizontalAlignment="Left" Height="72" Margin="280,320,0,0" VerticalAlignment="Top" Width="213" Click="Button_Click_5"/>
+        <Button Content="Заявка на покупку новой техники" HorizontalAlignment="Left" Height="72" Margin="31,169,0,0" VerticalAlignment="Top" Width="213" Click="Button_Click_7"/>
 
     </Grid>
 </Window>
