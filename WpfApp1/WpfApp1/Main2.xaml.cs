@@ -43,6 +43,21 @@ namespace WpfApp1
             rem.Show(); this.Close();
         }
 
-        
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            if (Class1.Role == "User")
+            {
+                var us = new Main2();
+                us.Show();
+                this.Close();
+            }
+            else
+            {
+
+                var adm = new AdminPage();
+                adm.Show();
+                this.Close();
+            }
+        }
     }
 }

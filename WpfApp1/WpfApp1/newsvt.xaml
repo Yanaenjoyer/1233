@@ -51,7 +51,7 @@
             <Label Content="Модель" Height="25" Width="66" HorizontalAlignment="Left" Canvas.Left="186" Canvas.Top="145" VerticalAlignment="Top"/>
             <Label Content="Скорость печати" Height="25" Width="120" HorizontalAlignment="Left" Canvas.Left="176" Canvas.Top="308" VerticalAlignment="Center" RenderTransformOrigin="0.403,-0.155"/>
         </Canvas>
-        <Grid Height="422" Margin="292,75,81,0" VerticalAlignment="Top" Visibility="Hidden">
+        <Grid x:Name="noytbyki" Height="422" Margin="292,75,81,0" VerticalAlignment="Top" Visibility="Hidden">
             <ComboBox x:Name="proizvod1" SelectionChanged="proizvod1_SelectionChanged" Height="48" VerticalAlignment="Top" Margin="246,0,0,0" RenderTransformOrigin="0.5,0.5" MaxDropDownHeight="200">
                 <ComboBox.RenderTransform>
                     <TransformGroup>

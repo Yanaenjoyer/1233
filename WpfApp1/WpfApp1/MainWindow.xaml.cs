@@ -47,6 +47,7 @@ namespace WpfApp1
                         var Main2 = new Main2();
                         Main2.Show();
                         this.Close();
+                        Class1.Role = "User";
                     }
                  
                 }

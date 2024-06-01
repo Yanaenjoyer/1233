@@ -192,3 +192,5 @@ C:\Users\Максим\Desktop\123\WpfApp1\WpfApp1\obj\Debug\Main2.baml
 C:\Users\Максим\Desktop\123\WpfApp1\WpfApp1\obj\Debug\remont.baml
 C:\Users\Максим\Desktop\123\WpfApp1\WpfApp1\obj\Debug\peredacha.g.cs
 C:\Users\Максим\Desktop\123\WpfApp1\WpfApp1\obj\Debug\peredacha.baml
+C:\Users\Максим\Desktop\123\WpfApp1\WpfApp1\obj\Debug\buy.g.cs
+C:\Users\Максим\Desktop\123\WpfApp1\WpfApp1\obj\Debug\buy.baml

@@ -102,9 +102,19 @@ namespace WpfApp1
 
         private void BackButton(object sender, RoutedEventArgs e)
         {
-            var adpg = new AdminPage();
-            adpg.Show();
-            this.Close();
+            if (Class1.Role == "User")
+            {
+                var us = new Main2();
+                us.Show();
+                this.Close();
+            }
+            else
+            {
+
+                var adm = new AdminPage();
+                adm.Show();
+                this.Close();
+            }
         }
 
         

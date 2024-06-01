@@ -10,6 +10,7 @@
         <Button Content="Перейти к СВТ" HorizontalAlignment="Left" Height="72" Margin="281,10,0,0" VerticalAlignment="Top" Width="213" Click="Button_Click"/>
         <Button Content="Создание заявки на ремонт" HorizontalAlignment="Left" Height="78" Margin="281,87,0,0" VerticalAlignment="Top" Width="213" Click="Button_Click_2"/>
         <Button Content="Передача СВТ " HorizontalAlignment="Left" Height="77" Margin="281,170,0,0" VerticalAlignment="Top" Width="213" Click="Button_Click_1"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Height="45" Margin="595,336,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click_3"/>
 
     </Grid>
 </Window>

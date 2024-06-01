@@ -37,5 +37,6 @@
                 <DataGridTextColumn Binding="{Binding Description}" Header="Описание" Width="100"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button Content="Назад" HorizontalAlignment="Left" Height="47" Margin="629,349,0,0" VerticalAlignment="Top" Width="138" Click="Button_Click_2"/>
     </Grid>
 </Window>

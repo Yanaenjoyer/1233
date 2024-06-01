@@ -84,9 +84,19 @@ namespace WpfApp1
 
         private void BackButton(object sender, RoutedEventArgs e)
         {
-            var admin = new AdminPage();
-            admin.Show();
-            this.Close();
+            if (Class1.Role == "User")
+            {
+                var us = new Main2();
+                us.Show();
+                this.Close();
+            }
+            else
+            {
+
+                var adm = new AdminPage();
+                adm.Show();
+                this.Close();
+            }
         }
 
         private void Addsvt_Click(object sender, RoutedEventArgs e)

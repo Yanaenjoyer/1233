@@ -52,8 +52,11 @@ namespace WpfApp1
                  s = selectedValue;
                 if(s == "Ноутбук")
                 {
-                    
-                }    
+                    // grid с ноутбуками называется noytbyki он скрыт
+                    noytbyki.Visibility = Visibility.Visible;
+                    p1.Visibility = Visibility.Hidden;
+                    save.Visibility = Visibility.Hidden;
+                }
             }
         }
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -212,13 +215,9 @@ namespace WpfApp1
                         MessageBox.Show(ex.Message);
                     }
 
-                }
-            
-            
+                }           
         }
-
-        
-
+ 
         private void proc_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ComboBox comboBox = sender as ComboBox;
@@ -254,7 +253,6 @@ namespace WpfApp1
 
             }
         }
-
         private void hddssd_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ComboBox comboBox = sender as ComboBox;
@@ -266,7 +264,6 @@ namespace WpfApp1
 
             }
         }
-
         private void ozy_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ComboBox comboBox = sender as ComboBox;
@@ -290,12 +287,22 @@ namespace WpfApp1
 
             }
         }
-
+        //сделать как с save кнопкой все переменные уже созданы только сохранить в бд
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            var svt = new svt();
-            svt.Show();
-            this.Close();
+            if (Class1.Role == "User")
+            {
+                var us = new Main2();
+                us.Show();
+                this.Close();
+            }
+            else
+            {
+
+                var adm = new AdminPage();
+                adm.Show();
+                this.Close();
+            }
         }
     }
 }
