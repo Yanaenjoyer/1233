@@ -22,9 +22,16 @@ namespace WpfApp1
     {
         public AdminPage()
         {
+          
             InitializeComponent();
+            diplomContext db = new diplomContext();
+            {
+                string q = Class1.Login;
+                string q1 = Class1.Role;               
+                aa.Content = q+"\n"+q1;
+            }
         }
-
+       
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             diplomContext db = new diplomContext();

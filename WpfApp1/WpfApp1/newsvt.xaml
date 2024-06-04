@@ -22,7 +22,7 @@
         <Button Content="Перейти к заполнению характеристик" HorizontalAlignment="Left" Margin="10,236,0,0" VerticalAlignment="Top" Height="47" Width="240" Click="Button_Click_1"/>
 
 
-        <Button x:Name="save" Content="Сохранить характеристики СВТ" HorizontalAlignment="Left" Margin="272,101,0,0" VerticalAlignment="Top" Height="54" Width="189" Click="save_Click" IsEnabled="False"/>
+        <Button x:Name="save" Content="Сохранить характеристики СВТ" HorizontalAlignment="Left" Margin="475,410,0,0" VerticalAlignment="Top" Height="54" Width="189" Click="save_Click" IsEnabled="False" RenderTransformOrigin="0.346,0.653"/>
         <Canvas x:Name="p1" HorizontalAlignment="Left" Height="360" Margin="475,10,0,0" VerticalAlignment="Top" Width="264">
 
             <ComboBox x:Name="proizvod" SelectionChanged="proizvod_SelectionChanged" Height="48" Canvas.Top="65" VerticalAlignment="Top" Width="174">
@@ -297,7 +297,7 @@
             </ComboBox>
             <Button x:Name="save2" Content="Сохранить характеристики СВТ" HorizontalAlignment="Left" Margin="0,68,0,0" VerticalAlignment="Top" Height="54" Width="188" Click="save_Click" IsEnabled="False"/>
         </Grid>
-        <Button Content="Назад" HorizontalAlignment="Left" Height="41" Margin="35,443,0,0" VerticalAlignment="Top" Width="95" Click="Button_Click_2"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Height="54" Margin="22,443,0,0" VerticalAlignment="Top" Width="134" Click="Button_Click_2"/>
     </Grid>
 
 </Window>

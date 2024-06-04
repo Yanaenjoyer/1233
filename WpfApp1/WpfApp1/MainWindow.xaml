@@ -6,10 +6,14 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Content="Войти" HorizontalAlignment="Center" Height="75" Margin="0,265,0,0" VerticalAlignment="Top" Width="288" Click="Button_Click"/>
-        <TextBox x:Name="login" HorizontalAlignment="Center" Height="78" Margin="0,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="382"/>
-        <PasswordBox x:Name="password" HorizontalAlignment="Center" Height="66" Margin="0,170,0,0" VerticalAlignment="Top" Width="248"/>
+
+    <Grid Background="#222222">
+        <Label Content="" HorizontalAlignment="Center" Height="319" Margin="0,61,0,0" VerticalAlignment="Top" Width="800" Background="#FF1F1E1E"/>
+
+        <Button Content="Войти" HorizontalAlignment="Center" Height="75" Margin="0,272,0,0" VerticalAlignment="Top" Width="508" Click="Button_Click" FontSize="24" FontFamily="Arial Black" Background="#FF4CAF50" />
+        <TextBox x:Name="login" HorizontalAlignment="Center" Height="78" Margin="0,86,0,0" TextWrapping="Wrap" Text="Логин" VerticalAlignment="Top" Width="382" Background="#FF676767" FontSize="24" FontFamily="Arial Black"/>
+        <PasswordBox x:Name="password" HorizontalAlignment="Center" Height="77" VerticalAlignment="Center" Width="382" Background="#FF676767"/>
+        <Label Content="Авторизация" HorizontalAlignment="Center" Height="36" Margin="0,10,0,0" VerticalAlignment="Top" Width="220" FontFamily="Arial Black" FontSize="24" Foreground="#FF676767"/>
 
     </Grid>
 </Window>

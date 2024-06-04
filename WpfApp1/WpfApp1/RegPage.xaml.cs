@@ -116,27 +116,77 @@ namespace WpfApp1
                     MessageBox.Show("Ошибка");
                 }
             }
+
+
+
         }       
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             string g = EmployeeID.Text;
-            diplomContext db = new diplomContext();
+            string g1 = Login.Text;
+            string g2 = EmployeeID.Text;
+            string g3 = UserID.Text;
+            int w = 0;
+            diplomContext db1 = new diplomContext();
             {
-                var us = db.Employees.Where(x=>x.EmployeeId==g).FirstOrDefault();
-                if (us != null)
+                var us = db1.Employees.Where(x=>x.EmployeeId==g).FirstOrDefault();
+                var log = db1.User.Where(x=>x.Login==g1).FirstOrDefault();
+                var emp = db1.User.Where(x=>x.EmployeeId== g2).FirstOrDefault();
+
+                var us1 = db1.User.Where(x => x.UserId == g3).FirstOrDefault();
+                if (log !=null)
                 {
-                   DialogResult res =  MessageBoxHelper.ShowYesNo("Показать данные пользователя?",MessageBoxIcon.Question);                    
-                    if (res == System.Windows.Forms.DialogResult.Yes)
-                    {
-                        grid.Visibility = Visibility.Visible;
-                        var r = db.Employees.Where(x=>x.EmployeeId == g).Select(x => x).ToList();
-                        DG.ItemsSource = r;
-                    }
-                    else
-                    {
-                        
-                    }
+                    Login.Text = "";
+                    Login.Background = Brushes.Red;
+                    MessageBox.Show("Пользователь с таким логином уже существует");
+                    w++;
                 }
+                else
+                {
+                    Login.Background = Brushes.White;
+                }
+                if (emp != null)
+                {
+                    EmployeeID.Text = "";
+                    EmployeeID.Background = Brushes.Red;
+                    MessageBox.Show("Пользователь с таким ID сотрудника уже существует");
+                    w++;
+                }
+                else
+                {
+                    EmployeeID.Background = Brushes.White;
+                }
+                if (us1 != null)
+                {
+                    UserID.Text = "";
+                    UserID.Background = Brushes.Red;
+                    MessageBox.Show("Пользователь с таким ID пользователя уже существует");
+                    w++;
+                }
+                else
+                {
+                    UserID.Background = Brushes.White;
+                }
+                //if (us != null)
+                //{
+                //    if (w == 0)
+                //    {
+
+
+                //        DialogResult res = MessageBoxHelper.ShowYesNo("Показать данные сотрудника?", MessageBoxIcon.Question);
+                //        if (res == System.Windows.Forms.DialogResult.Yes)
+                //        {
+                //            grid.Visibility = Visibility.Visible;
+                //            var r = db.Employees.Where(x => x.EmployeeId == g).Select(x => x).ToList();
+                //            DG.ItemsSource = r;
+                //        }
+                //        else
+                //        {
+
+                //        }
+                //    }
+                    
+                //}
             }
         }
         private void close_Click(object sender, RoutedEventArgs e)

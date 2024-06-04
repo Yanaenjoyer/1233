@@ -38,6 +38,8 @@ namespace WpfApp1
                     Class1.UserID = usid;
                     if (users.Role == "Admin")
                     {
+                        Class1.Login = users.Login;
+                        Class1.Role = users.Role;
                         var AdminPage = new AdminPage();
                         AdminPage.Show();
                         this.Close();
@@ -53,7 +55,7 @@ namespace WpfApp1
                 }
                 else
                 {
-                    MessageBox.Show("введите корректные данные для входа или попросите администратора зарегестрировать вас в системе");
+                    MessageBox.Show("Введите корректные данные для входа или попросите администратора зарегестрировать вас в системе");
                     
                 }
 
