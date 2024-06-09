@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="user_managment" Height="457" Width="800" Background="#FF222222">
-    <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="294" Margin="0,35,0,0" Width="800" Background="#FF1F1E1E">
-        <DataGrid   HorizontalAlignment="Left" Height="190" VerticalAlignment="Top" Width="601" AutoGenerateColumns="False" x:Name="DG" Margin="0,34,0,0"  >
+        Title="user_managment" Height="457" Width="869" Background="#FF89A4A7">
+    <Grid Background="#FFADD0A7" Height="434" VerticalAlignment="Center" HorizontalAlignment="Center" Width="870">
+        <DataGrid   HorizontalAlignment="Left" Height="190" VerticalAlignment="Top" Width="602" AutoGenerateColumns="False" x:Name="DG" Margin="23,91,0,0"  >
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding EmployeeId}" Header="Номер сотрудника" Width="100"/>
                 <DataGridTextColumn Binding="{Binding UserId}" Header="Номер_пользователя" Width="100"/>
@@ -16,15 +16,16 @@
                 <DataGridTextColumn Binding="{Binding Password}" Header="Пароль" Width="100"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="updateButton" FontSize="20" Content="Обновить" HorizontalAlignment="Left" Margin="606,58,0,0" VerticalAlignment="Top" Width="184" Height="40" Click="updateButton_Click" Background="#FF707070"/>
-        <Button x:Name="removeButton" FontSize="20" Content="Удалить" HorizontalAlignment="Left" Margin="606,147,0,0" VerticalAlignment="Top" Width="184" Height="40" Click="removeButton_Click" Background="#FF707070"/>
-        <Button x:Name="changeButton" FontSize="20" Content="Изменить" HorizontalAlignment="Left" Margin="606,103,0,0" VerticalAlignment="Top" Width="184" Height="40" Click="changeButton_Click" RenderTransformOrigin="0.324,0.455" Background="#FF707070"/>
-        <Button x:Name="izm" Content="Сохранить изменения" HorizontalAlignment="Left" Margin="242,224,0,0" VerticalAlignment="Top" Height="82" Width="162" Click="Button_Click" Visibility="Hidden"/>
+        <Button x:Name="updateButton" FontSize="20" Content="Обновить" HorizontalAlignment="Center" Margin="647,115,0,0" VerticalAlignment="Top" Width="184" Height="40" Click="updateButton_Click" Background="#FF7BB370" FontFamily="Arial Black"/>
+        <Button x:Name="removeButton" FontSize="20" Content="Удалить" HorizontalAlignment="Center" Margin="647,204,0,0" VerticalAlignment="Top" Width="184" Height="40" Click="removeButton_Click" Background="#FF7BB370" FontFamily="Arial Black"/>
+        <Button x:Name="changeButton" FontSize="20" Content="Изменить" HorizontalAlignment="Center" Margin="647,160,0,0" VerticalAlignment="Top" Width="184" Height="40" Click="changeButton_Click" RenderTransformOrigin="0.324,0.455" Background="#FF7BB370" FontFamily="Arial Black"/>
+        <Button x:Name="izm" Content="Сохранить изменения" HorizontalAlignment="Center" Margin="242,224,0,0" VerticalAlignment="Top" Height="82" Width="162" Click="Button_Click" Visibility="Hidden"/>
         <TextBox x:Name="nomsot" HorizontalAlignment="Left" Margin="85,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="33" Visibility="Hidden"/>
         <TextBox x:Name="par" HorizontalAlignment="Left" Margin="85,322,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="33" Visibility="Hidden"/>
         <TextBox x:Name="log" HorizontalAlignment="Left" Margin="85,284,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="33" Visibility="Hidden"/>
         <TextBox x:Name="rol" HorizontalAlignment="Left" Margin="85,246,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="33" Visibility="Hidden"/>
         <TextBox x:Name="nomus" HorizontalAlignment="Left" Margin="85,208,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="33" Visibility="Hidden"/>
-        <Button FontSize="20" Content="Назад" Margin="606,352,10,-97" Click="BackButton" Background="#FF707070"/>
+        <Button FontSize="20" Content="Назад" Margin="684,380,0,10" Click="BackButton" Background="#FF7BB370" HorizontalAlignment="Center" Width="175" FontFamily="Arial Black"/>
+        <Label x:Name="aa" Content="" HorizontalAlignment="Center" Height="43" Margin="0,10,697,0" VerticalAlignment="Top" Width="163" Foreground="#FF676767"/>
     </Grid>
 </Window>

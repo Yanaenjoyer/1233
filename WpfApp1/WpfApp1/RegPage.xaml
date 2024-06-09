@@ -5,27 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="RegPage" Height="450" Width="800">
-    <Grid Background="#FF222222">
-        <TextBox x:Name="EmployeeID" HorizontalAlignment="Left" Height="36" Margin="172,26,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="606" Background="#FF707070" FontFamily="Arial Black" FontSize="20"/>
-        <TextBox x:Name="UserID" HorizontalAlignment="Left" Height="36" Margin="172,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="606" Background="#FF707070" FontFamily="Arial Black" FontSize="20"/>
-        <TextBox x:Name="Role" HorizontalAlignment="Left" Height="36" Margin="172,137,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="606" Background="#FF707070" FontFamily="Arial Black" FontSize="20"/>
-        <TextBox x:Name="Login" HorizontalAlignment="Left" Height="36" Margin="172,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="606" Background="#FF707070" FontFamily="Arial Black" FontSize="20"/>
-        <TextBox x:Name="Password" HorizontalAlignment="Left" Height="36" Margin="172,257,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="606" Background="#FF707070" FontFamily="Arial Black" FontSize="20"/>
-        <Button x:Name="adduser" Content="Добавить нового пользователя" HorizontalAlignment="Left" Height="42" Margin="172,315,0,0" VerticalAlignment="Top" Width="328" Click="Button_Click" Background="#FF707070" FontFamily="Arial Black" FontSize="16"/>
-        <Button Content="Проверить" HorizontalAlignment="Left" Height="42" Margin="523,315,0,0" VerticalAlignment="Top" Width="135" Click="Button_Click_1" RenderTransformOrigin="0.481,0.504" Background="#FF707070" FontFamily="Arial Black" FontSize="16"/>
-        <Grid x:Name="grid" HorizontalAlignment="Left" Height="208" VerticalAlignment="Top" Margin="264,226,0,0" Width="446" Visibility="Hidden">
-            <DataGrid x:Name="DG" HorizontalAlignment="Left" Height="161" VerticalAlignment="Top" Width="436" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-            <Button x:Name="close" Content="Закрыть" HorizontalAlignment="Left" Height="37" Margin="310,166,0,0" VerticalAlignment="Top" Width="105" Click="close_Click"/>
-            <Button x:Name="nosotr" Content="Сотрудник не найден" HorizontalAlignment="Left" Height="37" Margin="127,166,0,0" VerticalAlignment="Top" Width="164" Click="nosotr_Click"/>
+        Title="RegPage" Height="516" Width="800" Background="#FF89A4A7">
+    <Grid Background="#FFADD0A7" Height="512" VerticalAlignment="Center" HorizontalAlignment="Center" Width="800">
+        <TextBox x:Name="EmployeeID" HorizontalAlignment="Center" Height="36" Margin="295,99,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="486" Background="White" FontFamily="Arial Black" FontSize="20"/>
+        <TextBox x:Name="UserID" HorizontalAlignment="Center" Height="36" Margin="295,151,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="486" Background="White" FontFamily="Arial Black" FontSize="20"/>
+        <TextBox x:Name="Role" HorizontalAlignment="Center" Height="36" Margin="295,210,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="486" Background="White" FontFamily="Arial Black" FontSize="20"/>
+        <TextBox x:Name="Login" HorizontalAlignment="Center" Height="36" Margin="295,268,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="486" Background="White" FontFamily="Arial Black" FontSize="20"/>
+        <TextBox x:Name="Password" HorizontalAlignment="Center" Height="36" Margin="295,330,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="486" Background="White" FontFamily="Arial Black" FontSize="20"/>
+        <Button x:Name="adduser" Content="Добавить нового пользователя" HorizontalAlignment="Left" Height="42" Margin="167,386,0,0" VerticalAlignment="Top" Width="360" Click="Button_Click" Background="#FF7BB370" FontFamily="Arial Black" FontSize="20"/>
+        <Button Content="Проверить" HorizontalAlignment="Center" Height="42" Margin="606,386,0,0" VerticalAlignment="Top" Width="175" Click="Button_Click_1" RenderTransformOrigin="0.487,0.821" Background="#FF7BB370" FontFamily="Arial Black" FontSize="20"/>
+        <Grid x:Name="grid" HorizontalAlignment="Center" Height="208" VerticalAlignment="Top" Margin="264,226,0,0" Width="446" Visibility="Hidden">
+            <DataGrid x:Name="DG" HorizontalAlignment="Center" Height="161" VerticalAlignment="Top" Width="436" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+            <Button x:Name="close" Content="Закрыть" HorizontalAlignment="Center" Height="37" Margin="310,166,0,0" VerticalAlignment="Top" Width="105" Click="close_Click"/>
+            <Button x:Name="nosotr" Content="Сотрудник не найден" HorizontalAlignment="Center" Height="37" Margin="127,166,0,0" VerticalAlignment="Top" Width="164" Click="nosotr_Click"/>
 
         </Grid>
-        <Button Content="Назад" HorizontalAlignment="Left" Height="46" Margin="677,378,0,0" VerticalAlignment="Top" Width="113" Click="Button_Click_2" Background="#FF707070" FontFamily="Arial Black" FontSize="16"/>
-        <Label Content="ID сотрудника" HorizontalAlignment="Left" Height="26" Margin="10,31,0,0" VerticalAlignment="Top" Width="144" Foreground="#FF676767" FontFamily="Arial Black" FontSize="16"/>
-        <Label Content="ID пользователя" HorizontalAlignment="Left" Height="26" Margin="10,83,0,0" VerticalAlignment="Top" Width="162" Foreground="#FF676767" FontFamily="Arial Black" FontSize="16"/>
-        <Label Content="Роль" HorizontalAlignment="Left" Height="26" Margin="10,147,0,0" VerticalAlignment="Top" Width="105" Foreground="#FF676767" FontSize="16" FontFamily="Arial Black"/>
-        <Label Content="Логин" HorizontalAlignment="Left" Height="26" Margin="10,0,0,0" VerticalAlignment="Center" Width="105" RenderTransformOrigin="0.479,-0.812" Foreground="#FF676767" FontFamily="Arial Black" FontSize="16"/>
-        <Label Content="Пароль" HorizontalAlignment="Left" Height="26" Margin="10,267,0,0" VerticalAlignment="Top" Width="105" RenderTransformOrigin="0.606,-0.521" Foreground="#FF676767" FontFamily="Arial Black" FontSize="16"/>
+        <Button Content="Назад" HorizontalAlignment="Center" Height="46" Margin="677,455,0,0" VerticalAlignment="Top" Width="113" Click="Button_Click_2" Background="#FF7BB370" FontFamily="Arial Black" FontSize="20"/>
+        <Label Content="ID сотрудника" HorizontalAlignment="Center" Height="42" Margin="0,99,585,0" VerticalAlignment="Top" Width="180" Foreground="#FF080505" FontFamily="Arial Black" FontSize="20" Background="Transparent"/>
+        <Label Content="ID пользователя" HorizontalAlignment="Center" Height="36" Margin="0,151,548,0" VerticalAlignment="Top" Width="217" Foreground="Black" FontFamily="Arial Black" FontSize="20" RenderTransformOrigin="0.698,0.584"/>
+        <Label Content="Роль" HorizontalAlignment="Center" Height="42" Margin="0,205,585,0" VerticalAlignment="Top" Width="180" FontSize="20" FontFamily="Arial Black"/>
+        <Label Content="Логин" HorizontalAlignment="Center" Height="37" Margin="0,267,620,0" VerticalAlignment="Top" Width="145" RenderTransformOrigin="0.479,-0.812" FontFamily="Arial Black" FontSize="20"/>
+        <Label Content="Пароль" HorizontalAlignment="Center" Height="41" Margin="0,330,620,0" VerticalAlignment="Top" Width="145" RenderTransformOrigin="0.606,-0.521" FontFamily="Arial Black" FontSize="20"/>
+        <TextBox HorizontalAlignment="Center" Height="39" Margin="0,20,0,0" TextWrapping="Wrap" Text="Создание пользователя" VerticalAlignment="Top" Width="304" Background="Transparent" BorderBrush="Transparent" FontFamily="Arial Black" FontSize="20"/>
+        <Label x:Name="aa" Content="" HorizontalAlignment="Center" Height="43" Margin="0,16,628,0" VerticalAlignment="Top" Width="164" Foreground="#FF676767" RenderTransformOrigin="0.501,0.602"/>
 
     </Grid>
 </Window>

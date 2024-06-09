@@ -5,21 +5,78 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="AdminPage" Height="450" Width="808">
-    <Grid Background="#FF222222">
-        <Label Content="" HorizontalAlignment="Center" Height="319" VerticalAlignment="Center" Width="800" Background="#FF1F1E1E"/>
+        Title="AdminPage" Height="450" Width="808" Background="#FF89A4A7">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="RoundBut" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#FFADD0A7" Height="434" VerticalAlignment="Center" HorizontalAlignment="Center" Width="836">
 
-        <Button Content="Перейти к СВТ" HorizontalAlignment="Left" Height="89" Margin="10,153,0,0" VerticalAlignment="Top" Width="227" Click="Button_Click_2" Background="#FF676767" FontFamily="Arial Black" FontSize="20"/>
-        <Button Content="    Управление &#xD;&#xA;пользователями" HorizontalAlignment="Center" Height="89" Margin="0,247,0,0" VerticalAlignment="Top" Width="224" Click="Button_Click_1" Background="#FF676767" FontFamily="Arial Black" FontSize="20"/>
-        <Button Content="      Новый&#xD;&#xA;пользователь" HorizontalAlignment="Center" Height="89" Margin="0,153,0,0" VerticalAlignment="Top" Width="224" Click="Button_Click" RenderTransformOrigin="0.912,-1.027" Background="#FF676767" HorizontalContentAlignment="Center" FontFamily="Arial Black" FontSize="20"/>
-        <Button Content="Назад" Margin="658,377,18,13" Click="Button_Click_3" RenderTransformOrigin="0.666,0.446" Background="#FF676767"/>
-        <Button Content="Создание заявки &#xD;&#xA;       на ремонт" HorizontalAlignment="Left" Height="89" Margin="564,247,0,0" VerticalAlignment="Top" Width="226" Click="Button_Click_4" Background="#FF676767" FontFamily="Arial Black" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Button Content="Передача СВТ " HorizontalAlignment="Left" Height="89" Margin="10,247,0,0" VerticalAlignment="Top" Width="227" Click="Button_Click_5" Background="#FF676767" FontFamily="Arial Black" FontSize="20"/>
-        <Button Content="Заявка на покупку &#xD;&#xA;    новой техники" HorizontalAlignment="Left" Height="89" Margin="564,152,0,0" VerticalAlignment="Top" Width="226" Click="Button_Click_7" Background="#FF676767" FontSize="20" FontFamily="Arial Black" HorizontalContentAlignment="Center"/>
-        <Label Content="Работа с СВТ" HorizontalAlignment="Left" Height="38" Margin="40,98,0,0" VerticalAlignment="Top" Width="166" Foreground="#FF676767" FontFamily="Arial Black" FontSize="20"/>
-        <Label Content="Работа с &#xD;&#xA;пользователями" HorizontalAlignment="Center" Height="53" Margin="0,86,0,0" VerticalAlignment="Top" Width="224" Foreground="#FF676767" FontFamily="Arial Black" FontSize="20"/>
-        <Label Content="Работа с &#xD;&#xA;заявками" HorizontalAlignment="Left" Height="61" Margin="591,86,0,0" VerticalAlignment="Top" Width="172" Foreground="#FF676767" FontFamily="Arial Black" FontSize="20"/>
-        <Label x:Name="aa" Content="" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" VerticalAlignment="Top" Width="163" Foreground="#FF676767"/>
+        <Button Style="{DynamicResource RoundBut}" Content="Перейти к СВТ" HorizontalAlignment="Center" Height="89" Margin="0,153,571,0" VerticalAlignment="Top" Width="227" Click="Button_Click_2" Background="#FF7BB370" FontFamily="Arial Black" FontSize="20" />
+        <Button Style="{DynamicResource RoundBut}" Content="    Управление &#xD;&#xA;пользователями" HorizontalAlignment="Center" Height="89" Margin="0,247,0,0" VerticalAlignment="Top" Width="224" Click="Button_Click_1" Background="#FF7BB370" FontFamily="Arial Black" FontSize="20"/>
+        <Button Style="{DynamicResource RoundBut}" Content="      Новый&#xD;&#xA;пользователь" HorizontalAlignment="Center" Height="89" Margin="0,153,0,0" VerticalAlignment="Top" Width="224" Click="Button_Click" RenderTransformOrigin="0.912,-1.027" Background="#FF7BB370" HorizontalContentAlignment="Center" FontFamily="Arial Black" FontSize="20"/>
+        <Button Style="{DynamicResource RoundBut}" Content="Назад" Margin="639,368,0,0" Click="Button_Click_3" RenderTransformOrigin="0.666,0.446" Background="#FF7BB370" FontFamily="Arial Black" FontSize="18" HorizontalAlignment="Center" Width="159" Height="56" VerticalAlignment="Top"/>
+        <Button Style="{DynamicResource RoundBut}" Content="Создание заявки &#xD;&#xA;       на ремонт" HorizontalAlignment="Center" Height="89" Margin="564,247,0,0" VerticalAlignment="Top" Width="226" Click="Button_Click_4" Background="#FF7BB370" FontFamily="Arial Black" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button Style="{DynamicResource RoundBut}" Content="Передача СВТ " HorizontalAlignment="Center" Height="89" Margin="0,247,571,0" VerticalAlignment="Top" Width="227" Click="Button_Click_5" Background="#FF7BB370" FontFamily="Arial Black" FontSize="20"/>
+        <Button Style="{DynamicResource RoundBut}" Content="Заявка на покупку &#xD;&#xA;    новой техники" HorizontalAlignment="Center" Height="89" Margin="564,152,0,0" VerticalAlignment="Top" Width="226" Click="Button_Click_7" Background="#FF7BB370" FontSize="20" FontFamily="Arial Black" HorizontalContentAlignment="Center"/>
+        <Label Content="Работа с СВТ" HorizontalAlignment="Center" Height="38" Margin="0,98,602,0" VerticalAlignment="Top" Width="166" Foreground="Black" FontFamily="Arial Black" FontSize="20" Background="Transparent"/>
+        <Label Content="Работа с &#xD;&#xA;пользователями" HorizontalAlignment="Center" Height="53" Margin="0,86,0,0" VerticalAlignment="Top" Width="224" Foreground="Black" FontFamily="Arial Black" FontSize="20"/>
+        <Label Content="Работа с &#xD;&#xA;заявками" HorizontalAlignment="Center" Height="61" Margin="591,86,0,0" VerticalAlignment="Top" Width="172" Foreground="Black" FontFamily="Arial Black" FontSize="20"/>
+        <Label x:Name="aa" Content="" HorizontalAlignment="Center" Height="43" Margin="0,10,635,0" VerticalAlignment="Top" Width="163" Foreground="#FF676767"/>
+        <Label Content="Учет СВТ" HorizontalAlignment="Center" Height="53" Margin="0,10,0,0" VerticalAlignment="Top" Width="142" Foreground="Black" FontFamily="Arial Black" FontSize="24"/>
 
     </Grid>
 </Window>

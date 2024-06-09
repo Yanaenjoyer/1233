@@ -5,25 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="newsvt" Height="530" Width="800">
+        Title="newsvt" Height="530" Width="800" Background="#FF89A4A7">
 
 
 
-    <Grid HorizontalAlignment="Center" Width="800" Height="520" VerticalAlignment="Top">
-        <ComboBox x:Name="myComboBox" SelectionChanged="myComboBox_SelectionChanged" Height="48" VerticalAlignment="Top" Width="240" Margin="475,14,85,0">
+    <Grid Background="#FFADD0A7" Height="546" VerticalAlignment="Center" HorizontalAlignment="Center" Width="884">
+        <ComboBox x:Name="myComboBox" SelectionChanged="myComboBox_SelectionChanged" Height="48" VerticalAlignment="Bottom" Width="240" Margin="522,0,0,426" HorizontalAlignment="Center">
             <ComboBoxItem Content="Принтер"/>
             <ComboBoxItem Content="Ноутбук"/>
             <ComboBoxItem Content="ПК"/>
             <ComboBoxItem Content="Монитор"/>
         </ComboBox>
-        <TextBox x:Name="sernum" HorizontalAlignment="Left" Height="52" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240"/>
-        <TextBox x:Name="invnum" HorizontalAlignment="Left" Height="51" Margin="10,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240"/>
-        <TextBox x:Name="sotnum" HorizontalAlignment="Left" Height="54" Margin="10,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240"/>
-        <Button Content="Перейти к заполнению характеристик" HorizontalAlignment="Left" Margin="10,236,0,0" VerticalAlignment="Top" Height="47" Width="240" Click="Button_Click_1"/>
+        <TextBox x:Name="sernum" HorizontalAlignment="Center" Height="52" Margin="0,0,591,422" TextWrapping="Wrap" Text="Серийный номер" VerticalAlignment="Bottom" Width="240" FontFamily="Arial Black" FontSize="14"/>
+        <TextBox x:Name="invnum" HorizontalAlignment="Center" Height="51" Margin="0,0,591,351" TextWrapping="Wrap" Text="Инвентарный номер" VerticalAlignment="Bottom" Width="240" FontFamily="Arial Black" FontSize="16"/>
+        <TextBox x:Name="sotnum" HorizontalAlignment="Center" Height="54" Margin="0,0,591,266" TextWrapping="Wrap" Text="ID сотрудника" VerticalAlignment="Bottom" Width="240" FontFamily="Arial Black" FontSize="14"/>
+        <Button Content="Перейти к заполнению характеристик" HorizontalAlignment="Center" Margin="0,296,597,0" VerticalAlignment="Top" Height="47" Width="292" Click="Button_Click_1" FontFamily="Arial Black"/>
 
 
-        <Button x:Name="save" Content="Сохранить характеристики СВТ" HorizontalAlignment="Left" Margin="475,410,0,0" VerticalAlignment="Top" Height="54" Width="189" Click="save_Click" IsEnabled="False" RenderTransformOrigin="0.346,0.653"/>
-        <Canvas x:Name="p1" HorizontalAlignment="Left" Height="360" Margin="475,10,0,0" VerticalAlignment="Top" Width="264">
+        <Button x:Name="save" Content="Сохранить характеристики СВТ" HorizontalAlignment="Left" Margin="515,465,0,0" VerticalAlignment="Top" Height="54" Width="189" Click="save_Click" IsEnabled="False" RenderTransformOrigin="0.346,0.653"/>
+        <Canvas x:Name="p1" HorizontalAlignment="Center" Height="360" Margin="515,75,0,0" VerticalAlignment="Top" Width="315">
 
             <ComboBox x:Name="proizvod" SelectionChanged="proizvod_SelectionChanged" Height="48" Canvas.Top="65" VerticalAlignment="Top" Width="174">
                 <ComboBoxItem Content="HP"/>
@@ -40,16 +40,16 @@
                 <ComboBoxItem Content="Sharp"/>
                 <ComboBoxItem Content="Toshiba"/>
             </ComboBox>
-            <TextBox x:Name="model" Height="62" TextWrapping="Wrap" Text="" Width="171" HorizontalAlignment="Left" Canvas.Top="129" VerticalAlignment="Top"/>
+            <TextBox x:Name="model" Height="62" TextWrapping="Wrap" Text="Модель" Width="171" HorizontalAlignment="Left" Canvas.Top="129" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="14"/>
             <ComboBox x:Name="Type" SelectionChanged="Type_SelectionChanged" Height="48" Canvas.Top="210" VerticalAlignment="Top" Width="174">
                 <ComboBoxItem Content="Лазерный"/>
                 <ComboBoxItem Content="Струйный"/>
                 <ComboBoxItem Content="Матричный"/>
             </ComboBox>
-            <TextBox x:Name="speed" Height="62" TextWrapping="Wrap" Text="" Width="171" HorizontalAlignment="Left" Canvas.Top="277" VerticalAlignment="Top"/>
-            <CheckBox x:Name="scan" Content="Есть сканер" Width="126" Height="35" HorizontalAlignment="Left" Canvas.Top="362" VerticalAlignment="Top"/>
-            <Label Content="Модель" Height="25" Width="66" HorizontalAlignment="Left" Canvas.Left="186" Canvas.Top="145" VerticalAlignment="Top"/>
-            <Label Content="Скорость печати" Height="25" Width="120" HorizontalAlignment="Left" Canvas.Left="176" Canvas.Top="308" VerticalAlignment="Center" RenderTransformOrigin="0.403,-0.155"/>
+            <Label Content="Тип печати" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="210" Width="102" FontFamily="Arial Black" FontSize="14"/>
+            <TextBox x:Name="speed" Height="62" TextWrapping="Wrap" Text="Скорость печати" Width="171" HorizontalAlignment="Left" Canvas.Top="277" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="14"/>
+            <CheckBox x:Name="scan" Content="Есть сканер" Width="126" Height="35" HorizontalAlignment="Center" Canvas.Top="362" VerticalAlignment="Center" FontFamily="Arial Black" FontSize="14"/>
+            <Label Content="Производитель" Canvas.Top="65" Width="150" FontFamily="Arial Black" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Canvas>
         <Grid x:Name="noytbyki" Height="422" Margin="292,75,81,0" VerticalAlignment="Top" Visibility="Hidden">
             <ComboBox x:Name="proizvod1" SelectionChanged="proizvod1_SelectionChanged" Height="48" VerticalAlignment="Top" Margin="246,0,0,0" RenderTransformOrigin="0.5,0.5" MaxDropDownHeight="200">
@@ -295,9 +295,11 @@
 
 
             </ComboBox>
-            <Button x:Name="save2" Content="Сохранить характеристики СВТ" HorizontalAlignment="Left" Margin="0,68,0,0" VerticalAlignment="Top" Height="54" Width="188" Click="save_Click" IsEnabled="False"/>
+            <Button x:Name="save2" Content="Сохранить характеристики СВТ" HorizontalAlignment="Center" Margin="0,68,0,0" VerticalAlignment="Top" Height="54" Width="188" Click="save_Click" IsEnabled="False"/>
         </Grid>
-        <Button Content="Назад" HorizontalAlignment="Left" Height="54" Margin="22,443,0,0" VerticalAlignment="Top" Width="134" Click="Button_Click_2"/>
+        <Button Content="Назад" HorizontalAlignment="Right" Height="54" Margin="0,443,644,0" VerticalAlignment="Top" Width="134" Click="Button_Click_2" FontFamily="Arial Black"/>
+        <Label Content="Заполненеие характеристик СВТ" HorizontalAlignment="Left" Height="37" Margin="250,20,0,0" VerticalAlignment="Top" Width="360" FontFamily="Arial Black" FontSize="18"/>
+
     </Grid>
 
 </Window>

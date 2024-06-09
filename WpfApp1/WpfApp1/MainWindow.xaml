@@ -5,15 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="#FF89A4A7">
 
-    <Grid Background="#222222">
-        <Label Content="" HorizontalAlignment="Center" Height="319" Margin="0,61,0,0" VerticalAlignment="Top" Width="800" Background="#FF1F1E1E"/>
+    <Grid Background="#FFADD0A7" Height="434" VerticalAlignment="Center" HorizontalAlignment="Center" Width="800">
 
-        <Button Content="Войти" HorizontalAlignment="Center" Height="75" Margin="0,272,0,0" VerticalAlignment="Top" Width="508" Click="Button_Click" FontSize="24" FontFamily="Arial Black" Background="#FF4CAF50" />
-        <TextBox x:Name="login" HorizontalAlignment="Center" Height="78" Margin="0,86,0,0" TextWrapping="Wrap" Text="Логин" VerticalAlignment="Top" Width="382" Background="#FF676767" FontSize="24" FontFamily="Arial Black"/>
-        <PasswordBox x:Name="password" HorizontalAlignment="Center" Height="77" VerticalAlignment="Center" Width="382" Background="#FF676767"/>
-        <Label Content="Авторизация" HorizontalAlignment="Center" Height="36" Margin="0,10,0,0" VerticalAlignment="Top" Width="220" FontFamily="Arial Black" FontSize="24" Foreground="#FF676767"/>
+        <Button Content="Войти" HorizontalAlignment="Center" Height="75" Margin="0,272,0,0" VerticalAlignment="Top" Width="508" Click="Button_Click" FontSize="24" FontFamily="Arial Black" Background="#FF7BB370" />
+        <TextBox x:Name="login" HorizontalAlignment="Center" Height="78" Margin="0,0,0,270" TextWrapping="Wrap" Text="Логин" VerticalAlignment="Bottom" Width="382" Background="White" FontSize="24" FontFamily="Arial Black"/>
+        <PasswordBox x:Name="password" HorizontalAlignment="Center" Height="77" VerticalAlignment="Center" Width="382" Background="#FFF7F7F7" />
+        <Label Content="Авторизация" HorizontalAlignment="Left" Height="71" VerticalAlignment="Top" Width="248" FontFamily="Arial Black" FontSize="30" Foreground="Black" Margin="260,10,0,0"/>
 
     </Grid>
 </Window>

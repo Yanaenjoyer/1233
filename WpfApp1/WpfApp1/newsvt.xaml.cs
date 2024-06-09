@@ -50,6 +50,12 @@ namespace WpfApp1
 
                 
                  s = selectedValue;
+                if(s =="Принтер")
+                {
+                    p1.Visibility = Visibility.Visible;
+                    noytbyki.Visibility = Visibility.Hidden;
+                    save.Visibility = Visibility.Visible;
+                }
                 if(s == "Ноутбук")
                 {
                     // grid с ноутбуками называется noytbyki он скрыт
