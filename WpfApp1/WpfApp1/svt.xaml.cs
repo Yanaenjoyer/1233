@@ -41,8 +41,8 @@ namespace WpfApp1
 
 
                 ComputerFacilities path = DG1.SelectedItem as ComputerFacilities;
-                MessageBox.Show(" ID: " + path.SerialNumber + "\n Исполнитель: " + path.InventoryNumber + "\n Альбом: " + path.EmployeeId
-                    + "\n Год: " + path.Description);
+                //MessageBox.Show(" ID: " + path.SerialNumber + "\n Исполнитель: " + path.InventoryNumber + "\n Альбом: " + path.EmployeeId
+                //    + "\n Год: " + path.Description);
 
                 if (path != null)
                 {

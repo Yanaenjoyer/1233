@@ -8,10 +8,10 @@
         Title="Main2" Height="450" Width="800" Background="#FF89A4A7">
 
     <Grid Background="#FFADD0A7" Height="435" VerticalAlignment="Center" HorizontalAlignment="Center" Width="502">
-        <Button Content="Перейти к СВТ" HorizontalAlignment="Center" Height="72" Margin="0,72,0,0" VerticalAlignment="Top" Width="214" Click="Button_Click"/>
-        <Button Content="Создание заявки на ремонт" HorizontalAlignment="Center" Height="78" Margin="0,160,0,0" VerticalAlignment="Top" Width="214" Click="Button_Click_2"/>
-        <Button Content="Передача СВТ " HorizontalAlignment="Center" Height="77" Margin="0,257,0,0" VerticalAlignment="Top" Width="214" Click="Button_Click_1"/>
-        <Button Content="Назад" HorizontalAlignment="Center" Height="45" Margin="398,370,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click_3"/>
+        <Button Content="Перейти к СВТ" HorizontalAlignment="Center" Height="72" Margin="0,72,0,0" VerticalAlignment="Top" Width="214" Click="Button_Click" FontFamily="Arial Black" FontSize="20"/>
+        <Button Content="Создание заявки&#xD;&#xA;      на ремонт" HorizontalAlignment="Center" Height="78" Margin="0,160,0,0" VerticalAlignment="Top" Width="214" Click="Button_Click_2" FontFamily="Arial Black" FontSize="20"/>
+        <Button Content="Передача СВТ " HorizontalAlignment="Center" Height="77" Margin="0,257,0,0" VerticalAlignment="Top" Width="214" Click="Button_Click_1" FontFamily="Arial Black" FontSize="22"/>
+        <Button Content="Назад" HorizontalAlignment="Center" Height="45" Margin="398,370,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click_3" FontFamily="Arial Black" FontSize="20"/>
         <Label Content="Учет СВТ" HorizontalAlignment="Center" Height="53" Margin="0,10,0,0" VerticalAlignment="Top" Width="142" Foreground="Black" FontFamily="Arial Black" FontSize="24"/>
 
     </Grid>

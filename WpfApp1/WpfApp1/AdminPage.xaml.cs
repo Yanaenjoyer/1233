@@ -38,6 +38,7 @@ namespace WpfApp1
             {
                 var RegPage = new RegPage();
                 RegPage.Show();
+                this.Close();
                 
             }
         }

@@ -8,15 +8,25 @@
         Title="peredacha" Height="450" Width="1115" Background="#FF89A4A7">
 
     <Grid Background="#FFADD0A7" Height="435" VerticalAlignment="Center" HorizontalAlignment="Center" Width="1116">
-        <DataGrid   HorizontalAlignment="Right" Height="153" VerticalAlignment="Bottom" Width="530" AutoGenerateColumns="False" x:Name="DG" Margin="0,0,575,272"  >
+        <!--<DataGrid   HorizontalAlignment="Right" Height="153" VerticalAlignment="Bottom" Width="832" AutoGenerateColumns="False" x:Name="DG" Margin="0,0,126,286" RenderTransformOrigin="0.5,0.5"  >
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.496"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="3.599"/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding BuildingNumber}" Header="Номер здания" Width="100"/>
                 <DataGridTextColumn Binding="{Binding DepartmentId}" Header="Номер отдела" Width="100"/>
                 <DataGridTextColumn Binding="{Binding EmployeeId}" Header="Номер сотрудника" Width="100"/>
                 <DataGridTextColumn Binding="{Binding SerialNumber}" Header="Серийный номер" Width="100"/>
                 <DataGridTextColumn Binding="{Binding InventoryNumber}" Header="Инвентарный номер" Width="100"/>
+                <DataGridTextColumn Binding="{Binding Type}" Header="Тип СВТ" Width="100"/>
+                <DataGridTextColumn Binding="{Binding Description}" Header="Описание" Width="100"/>
             </DataGrid.Columns>
-        </DataGrid>
+        </DataGrid>-->
         <Button Content="Обновить" HorizontalAlignment="Left" Height="47" Margin="445,0,0,220" VerticalAlignment="Bottom" Width="138" Click="Button_Click" FontFamily="Arial Black" FontSize="16"/>
         <TextBox x:Name="zdan" HorizontalAlignment="Center" Height="40" Margin="0,0,877,218" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="197"/>
         <TextBox x:Name="inv" HorizontalAlignment="Center" Height="40" Margin="0,0,877,38" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="197"/>
@@ -29,15 +39,7 @@
         <Label Content="Номер сотрудника" HorizontalAlignment="Right" Height="40" Margin="0,0,720,122" VerticalAlignment="Bottom" Width="157" FontFamily="Arial Black" FontSize="14"/>
         <Label Content="Номер отдела" HorizontalAlignment="Right" Height="40" Margin="0,0,751,167" VerticalAlignment="Bottom" Width="126" FontFamily="Arial Black" FontSize="14"/>
         <Button Content="Выполнить передачу СВТ" HorizontalAlignment="Right" Height="45" Margin="0,0,477,173" VerticalAlignment="Bottom" Width="248" Click="Button_Click_1" FontFamily="Arial Black" FontSize="16"/>
-        <DataGrid Height="152" VerticalAlignment="Bottom" AutoGenerateColumns="False" x:Name="DG1" Margin="558,0,0,272" HorizontalAlignment="Left" Width="530"  >
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding SerialNumber}" Header="Серийный номер" Width="100"/>
-                <DataGridTextColumn Binding="{Binding InventoryNumber}" Header="Инвентарный номер" Width="100"/>
-                <DataGridTextColumn Binding="{Binding EmployeeId}" Header="Номер сотрудника" Width="100"/>
-                <DataGridTextColumn Binding="{Binding Type}" Header="Тип свт" Width="100"/>
-                <DataGridTextColumn Binding="{Binding Description}" Header="Описание" Width="100"/>
-            </DataGrid.Columns>
-        </DataGrid>
         <Button Content="Назад" HorizontalAlignment="Left" Height="47" Margin="967,377,0,0" VerticalAlignment="Top" Width="138" Click="Button_Click_2" RenderTransformOrigin="0.725,0.274" FontFamily="Arial Black" FontSize="16"/>
+        <DataGrid x:Name="DG2" HorizontalAlignment="Left" Height="148" Margin="262,15,0,0" VerticalAlignment="Top" Width="667" d:ItemsSource="{d:SampleData ItemCount=5}"/>
     </Grid>
 </Window>

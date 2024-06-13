@@ -10,7 +10,7 @@
         <DataGrid   HorizontalAlignment="Left" Height="190" VerticalAlignment="Top" Width="602" AutoGenerateColumns="False" x:Name="DG" Margin="23,91,0,0"  >
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding EmployeeId}" Header="Номер сотрудника" Width="100"/>
-                <DataGridTextColumn Binding="{Binding UserId}" Header="Номер_пользователя" Width="100"/>
+                <DataGridTextColumn Binding="{Binding UserId}" Header="Номер пользователя" Width="100"/>
                 <DataGridTextColumn Binding="{Binding Role}" Header="Роль" Width="100"/>
                 <DataGridTextColumn Binding="{Binding Login}" Header="Логин" Width="100"/>
                 <DataGridTextColumn Binding="{Binding Password}" Header="Пароль" Width="100"/>
@@ -27,5 +27,6 @@
         <TextBox x:Name="nomus" HorizontalAlignment="Left" Margin="85,208,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="33" Visibility="Hidden"/>
         <Button FontSize="20" Content="Назад" Margin="684,380,0,10" Click="BackButton" Background="#FF7BB370" HorizontalAlignment="Center" Width="175" FontFamily="Arial Black"/>
         <Label x:Name="aa" Content="" HorizontalAlignment="Center" Height="43" Margin="0,10,697,0" VerticalAlignment="Top" Width="163" Foreground="#FF676767"/>
+        <TextBox HorizontalAlignment="Center" Height="53" Margin="0,0,0,371" TextWrapping="Wrap" Text="Управление пользователями" VerticalAlignment="Bottom" Width="360" Background="Transparent" BorderBrush="Transparent" FontFamily="Arial Black" FontSize="20"/>
     </Grid>
 </Window>

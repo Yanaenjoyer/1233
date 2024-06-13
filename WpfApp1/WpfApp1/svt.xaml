@@ -9,7 +9,7 @@
 
     <Grid Background="#FFADD0A7" Height="471" VerticalAlignment="Center" HorizontalAlignment="Center" Width="840">
         <Button FontSize="20" Content="Назад" Margin="636,407,0,0" VerticalAlignment="Top" Height="39" Click="BackButton" FontFamily="Arial Black" HorizontalAlignment="Center" Width="178"/>
-        <DataGrid   HorizontalAlignment="Center" Height="153" VerticalAlignment="Bottom" Width="601" AutoGenerateColumns="False" x:Name="DG1" Margin="0,0,229,289"  >
+        <DataGrid   HorizontalAlignment="Center" Height="154" VerticalAlignment="Top" Width="634" AutoGenerateColumns="False" x:Name="DG1" Margin="0,82,196,0"  >
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding SerialNumber}" Header="Серийный номер" Width="100"/>
                 <DataGridTextColumn Binding="{Binding InventoryNumber}" Header="Инвентарный номер" Width="100"/>
@@ -18,9 +18,10 @@
                 <DataGridTextColumn Binding="{Binding Description}" Header="Описание" Width="100"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="removeButton" FontSize="20" Content="Удалить" HorizontalAlignment="Center" Margin="627,0,0,309" VerticalAlignment="Bottom" Width="138" Height="40" Click="removeButton_Click" FontFamily="Arial Black"/>
-        <Button x:Name="changeButton" FontSize="20" Content="Изменить" HorizontalAlignment="Center" Margin="627,0,0,354" VerticalAlignment="Bottom" Width="138" Height="40" Click="changeButton_Click" RenderTransformOrigin="0.324,0.455" FontFamily="Arial Black"/>
-        <Button x:Name="updateButton" FontSize="20" Content="Обновить" HorizontalAlignment="Center" Margin="627,0,0,402" VerticalAlignment="Bottom" Width="138" Height="40" Click="updateButton_Click" FontFamily="Arial Black"/>
-        <Button x:Name="Addsvt" FontSize="20" Content="Добавить СВТ" Margin="616,0,0,265" VerticalAlignment="Bottom" Height="39" Click="Addsvt_Click" HorizontalAlignment="Center" Width="169" FontFamily="Arial Black"/>
+        <Button x:Name="removeButton" FontSize="20" Content="Удалить" HorizontalAlignment="Center" Margin="656,0,0,260" VerticalAlignment="Bottom" Width="138" Height="40" Click="removeButton_Click" FontFamily="Arial Black"/>
+        <Button x:Name="changeButton" FontSize="20" Content="Изменить" HorizontalAlignment="Center" Margin="656,0,0,305" VerticalAlignment="Bottom" Width="138" Height="40" Click="changeButton_Click" RenderTransformOrigin="0.324,0.455" FontFamily="Arial Black"/>
+        <Button x:Name="updateButton" FontSize="20" Content="Обновить" HorizontalAlignment="Center" Margin="656,0,0,353" VerticalAlignment="Bottom" Width="138" Height="40" Click="updateButton_Click" FontFamily="Arial Black"/>
+        <Button x:Name="Addsvt" FontSize="20" Content="Добавить СВТ" Margin="664,0,0,0" VerticalAlignment="Center" Height="39" Click="Addsvt_Click" HorizontalAlignment="Left" Width="168" FontFamily="Arial Black"/>
+        <TextBox HorizontalAlignment="Center" Height="35" Margin="0,10,0,0" TextWrapping="Wrap" Text="Управление СВТ" VerticalAlignment="Top" Width="252" Background="Transparent" BorderBrush="Transparent" FontFamily="Arial Black" FontSize="20"/>
     </Grid>
 </Window>

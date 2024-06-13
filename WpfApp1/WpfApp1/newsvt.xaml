@@ -298,7 +298,7 @@
             <Button x:Name="save2" Content="Сохранить характеристики СВТ" HorizontalAlignment="Center" Margin="0,68,0,0" VerticalAlignment="Top" Height="54" Width="188" Click="save_Click" IsEnabled="False"/>
         </Grid>
         <Button Content="Назад" HorizontalAlignment="Right" Height="54" Margin="0,443,644,0" VerticalAlignment="Top" Width="134" Click="Button_Click_2" FontFamily="Arial Black"/>
-        <Label Content="Заполненеие характеристик СВТ" HorizontalAlignment="Left" Height="37" Margin="250,20,0,0" VerticalAlignment="Top" Width="360" FontFamily="Arial Black" FontSize="18"/>
+        <Label Content="Заполненеие характеристик СВТ" HorizontalAlignment="Center" Height="37" Margin="0,0,0,479" VerticalAlignment="Bottom" Width="396" FontFamily="Arial Black" FontSize="20"/>
 
     </Grid>
 

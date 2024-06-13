@@ -29,8 +29,34 @@ namespace WpfApp1
         {
             diplomContext db = new diplomContext();
             {
-                DG.ItemsSource = db.EquipmentTransfer.Select(x=>x).ToList();
-                DG1.ItemsSource = db.ComputerFacilities.Select(x => x).ToList();
+                var query = (from a in db.ComputerFacilities
+                             join b in db.EquipmentTransfer on a.SerialNumber equals b.SerialNumber
+                             select new
+                             {
+                                 Здание = b.BuildingNumber,
+                                 Отдел = b.DepartmentId,
+                                 Сотрудник = b.EmployeeId,
+                                 Серийный_номер = b.SerialNumber,
+                                 Инвентарный_номер = b.InventoryNumber,
+                                 Тип = a.Type,
+                                 Описание = a.Description
+                             }).ToList();
+                //var q = (from a in db.ComputerFacilities
+                //             join b in db.EquipmentTransfer on a.SerialNumber equals b.SerialNumber
+                //             join z in db.Employees on a.EmployeeId equals z.EmployeeId
+                //             select new
+                //             {
+                //                 Здание = b.BuildingNumber,
+                //                 Отдел = b.DepartmentId,
+                //                 Сотрудник = b.EmployeeId,
+                //                 Имя = z.FirstName,
+                //                 Фамилия = z.LastName,
+                //                 Серийный_номер = b.SerialNumber,
+                //                 Инвентарный_номер = b.InventoryNumber,
+                //                 Тип = a.Type,
+                //                 Описание = a.Description
+                //             }).ToList();
+                DG2.ItemsSource = query;
             }
         }
 
